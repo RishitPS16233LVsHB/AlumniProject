@@ -1,0 +1,741 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BCC41D72-79EE-49E9-BF28-A2E261CC0747}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AlumniProject</RootNamespace>
+    <AssemblyName>AlumniProject</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44379</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.31.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>packages\AspNet.ScriptManager.bootstrap.3.4.1\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="AddReplyToPost.aspx" />
+    <Content Include="AdminPanel\ban.aspx" />
+    <Content Include="AdminPanel\html\AcceptUser.aspx" />
+    <Content Include="AdminPanel\html\account-requests.aspx" />
+    <Content Include="AdminPanel\html\aside.aspx" />
+    <Content Include="AdminPanel\html\BanEvent.aspx" />
+    <Content Include="AdminPanel\html\BanJobAlert.aspx" />
+    <Content Include="AdminPanel\html\BanPost.aspx" />
+    <Content Include="AdminPanel\html\BanUser.aspx" />
+    <Content Include="AdminPanel\html\bulkEmail.aspx" />
+    <Content Include="AdminPanel\html\database.aspx" />
+    <Content Include="AdminPanel\html\footer.aspx" />
+    <Content Include="AdminPanel\html\header.aspx" />
+    <Content Include="AdminPanel\html\icon-material.html" />
+    <Content Include="AdminPanel\html\index.aspx" />
+    <Content Include="AdminPanel\html\LoadDataThroughCSV.aspx" />
+    <Content Include="AdminPanel\html\pages-error-404.aspx" />
+    <Content Include="AdminPanel\html\pages-profile.aspx" />
+    <Content Include="AdminPanel\html\RejectUser.aspx" />
+    <Content Include="AdminPanel\html\report.aspx" />
+    <Content Include="AdminPanel\html\AddData.aspx" />
+    <Content Include="AdminPanel\html\temp.aspx" />
+    <Content Include="AdminPanel\html\user-activity.aspx" />
+    <Content Include="BulkEmail.aspx" />
+    <Content Include="CancelApplication.aspx" />
+    <Content Include="CancelParticipation.aspx" />
+    <Content Include="Chat.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="CreateChat.aspx" />
+    <Content Include="CreateEvent.aspx" />
+    <Content Include="CreateJobAlert.aspx" />
+    <Content Include="CreatePosts.aspx" />
+    <Content Include="database.aspx" />
+    <Content Include="DatabaseConnection\Connections.aspx" />
+    <Content Include="DatabaseConnection\CrudOperations.aspx" />
+    <Content Include="DatabaseConnection\DatabaseCode.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="DeleteChat.aspx" />
+    <Content Include="EventParticipate.aspx" />
+    <Content Include="Events.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="footer.aspx" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="ForgotPasswordOTPValidations.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="header.aspx" />
+    <Content Include="homePage.aspx" />
+    <Content Include="icon-material.html" />
+    <Content Include="ImageTransfer.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="JobApply.aspx" />
+    <Content Include="jobDetails.aspx" />
+    <Content Include="Jobs.aspx" />
+    <Content Include="Login.aspx" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="LoginPageValidations.aspx" />
+    <Content Include="LogOutSession.aspx" />
+    <Content Include="OriginalChat.aspx" />
+    <Content Include="OtherUserProfile.aspx" />
+    <Content Include="OTP.aspx" />
+    <Content Include="OTPValidations.aspx" />
+    <Content Include="pages-error-404.aspx" />
+    <Content Include="pages-profile.aspx" />
+    <Content Include="Partials\footer.html" />
+    <Content Include="Partials\_bootstrapcdn.html" />
+    <Content Include="Partials\_headerlinks.html" />
+    <Content Include="Partials\_nav.aspx" />
+    <Content Include="Partials\_navjs.html" />
+    <Content Include="PersonalMail.aspx" />
+    <Content Include="Posts.aspx" />
+    <Content Include="profile.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="RemoveEvent.aspx" />
+    <Content Include="RemoveJobAlert.aspx" />
+    <Content Include="RemovePost.aspx" />
+    <Content Include="report.aspx" />
+    <Content Include="ResetPassword.aspx" />
+    <Content Include="ResetPasswordValidations.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="SeeReplies.aspx" />
+    <Content Include="SendMail.aspx" />
+    <Content Include="SessionCheck.aspx" />
+    <Content Include="settings.aspx" />
+    <Content Include="Site.Master" />
+    <Content Include="temp.aspx" />
+    <Content Include="user-activity.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="Views\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddReplyToPost.aspx.cs">
+      <DependentUpon>AddReplyToPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddReplyToPost.aspx.designer.cs">
+      <DependentUpon>AddReplyToPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ban.aspx.cs">
+      <DependentUpon>ban.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ban.aspx.designer.cs">
+      <DependentUpon>ban.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\html\AcceptUser.aspx.cs">
+      <DependentUpon>AcceptUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\html\AcceptUser.aspx.designer.cs">
+      <DependentUpon>AcceptUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\html\AddData.aspx.cs">
+      <DependentUpon>AddData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\html\AddData.aspx.designer.cs">
+      <DependentUpon>AddData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\html\BanEvent.aspx.cs">
+      <DependentUpon>BanEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\html\BanEvent.aspx.designer.cs">
+      <DependentUpon>BanEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\html\BanJobAlert.aspx.cs">
+      <DependentUpon>BanJobAlert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\html\BanJobAlert.aspx.designer.cs">
+      <DependentUpon>BanJobAlert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\html\BanPost.aspx.cs">
+      <DependentUpon>BanPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\html\BanPost.aspx.designer.cs">
+      <DependentUpon>BanPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\html\BanUser.aspx.cs">
+      <DependentUpon>BanUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\html\BanUser.aspx.designer.cs">
+      <DependentUpon>BanUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\html\LoadDataThroughCSV.aspx.cs">
+      <DependentUpon>LoadDataThroughCSV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\html\LoadDataThroughCSV.aspx.designer.cs">
+      <DependentUpon>LoadDataThroughCSV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\html\RejectUser.aspx.cs">
+      <DependentUpon>RejectUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\html\RejectUser.aspx.designer.cs">
+      <DependentUpon>RejectUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BulkEmail.aspx.cs">
+      <DependentUpon>BulkEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BulkEmail.aspx.designer.cs">
+      <DependentUpon>BulkEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CancelApplication.aspx.cs">
+      <DependentUpon>CancelApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CancelApplication.aspx.designer.cs">
+      <DependentUpon>CancelApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CancelParticipation.aspx.cs">
+      <DependentUpon>CancelParticipation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CancelParticipation.aspx.designer.cs">
+      <DependentUpon>CancelParticipation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Chat.aspx.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chat.aspx.designer.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateChat.aspx.cs">
+      <DependentUpon>CreateChat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateChat.aspx.designer.cs">
+      <DependentUpon>CreateChat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateEvent.aspx.cs">
+      <DependentUpon>CreateEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateEvent.aspx.designer.cs">
+      <DependentUpon>CreateEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateJobAlert.aspx.cs">
+      <DependentUpon>CreateJobAlert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateJobAlert.aspx.designer.cs">
+      <DependentUpon>CreateJobAlert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePosts.aspx.cs">
+      <DependentUpon>CreatePosts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreatePosts.aspx.designer.cs">
+      <DependentUpon>CreatePosts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseConnection\Connections.aspx.cs">
+      <DependentUpon>Connections.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatabaseConnection\Connections.aspx.designer.cs">
+      <DependentUpon>Connections.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseConnection\CrudOperations.aspx.cs">
+      <DependentUpon>CrudOperations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatabaseConnection\CrudOperations.aspx.designer.cs">
+      <DependentUpon>CrudOperations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseConnection\DatabaseCode.ascx.cs">
+      <DependentUpon>DatabaseCode.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatabaseConnection\DatabaseCode.ascx.designer.cs">
+      <DependentUpon>DatabaseCode.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteChat.aspx.cs">
+      <DependentUpon>DeleteChat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteChat.aspx.designer.cs">
+      <DependentUpon>DeleteChat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventParticipate.aspx.cs">
+      <DependentUpon>EventParticipate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventParticipate.aspx.designer.cs">
+      <DependentUpon>EventParticipate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Events.aspx.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Events.aspx.designer.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPasswordOTPValidations.aspx.cs">
+      <DependentUpon>ForgotPasswordOTPValidations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPasswordOTPValidations.aspx.designer.cs">
+      <DependentUpon>ForgotPasswordOTPValidations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="homePage.aspx.cs">
+      <DependentUpon>homePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="homePage.aspx.designer.cs">
+      <DependentUpon>homePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageTransfer.aspx.cs">
+      <DependentUpon>ImageTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImageTransfer.aspx.designer.cs">
+      <DependentUpon>ImageTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JobApply.aspx.cs">
+      <DependentUpon>JobApply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JobApply.aspx.designer.cs">
+      <DependentUpon>JobApply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="jobDetails.aspx.cs">
+      <DependentUpon>jobDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jobDetails.aspx.designer.cs">
+      <DependentUpon>jobDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Jobs.aspx.cs">
+      <DependentUpon>Jobs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Jobs.aspx.designer.cs">
+      <DependentUpon>Jobs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPageValidations.aspx.cs">
+      <DependentUpon>LoginPageValidations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPageValidations.aspx.designer.cs">
+      <DependentUpon>LoginPageValidations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogOutSession.aspx.cs">
+      <DependentUpon>LogOutSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogOutSession.aspx.designer.cs">
+      <DependentUpon>LogOutSession.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OriginalChat.aspx.cs">
+      <DependentUpon>OriginalChat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OriginalChat.aspx.designer.cs">
+      <DependentUpon>OriginalChat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OtherUserProfile.aspx.cs">
+      <DependentUpon>OtherUserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OtherUserProfile.aspx.designer.cs">
+      <DependentUpon>OtherUserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OTP.aspx.cs">
+      <DependentUpon>OTP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OTP.aspx.designer.cs">
+      <DependentUpon>OTP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OTPValidations.aspx.cs">
+      <DependentUpon>OTPValidations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OTPValidations.aspx.designer.cs">
+      <DependentUpon>OTPValidations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalMail.aspx.cs">
+      <DependentUpon>PersonalMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalMail.aspx.designer.cs">
+      <DependentUpon>PersonalMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Posts.aspx.cs">
+      <DependentUpon>Posts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Posts.aspx.designer.cs">
+      <DependentUpon>Posts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveEvent.aspx.cs">
+      <DependentUpon>RemoveEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemoveEvent.aspx.designer.cs">
+      <DependentUpon>RemoveEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveJobAlert.aspx.cs">
+      <DependentUpon>RemoveJobAlert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemoveJobAlert.aspx.designer.cs">
+      <DependentUpon>RemoveJobAlert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemovePost.aspx.cs">
+      <DependentUpon>RemovePost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemovePost.aspx.designer.cs">
+      <DependentUpon>RemovePost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPasswordValidations.aspx.cs">
+      <DependentUpon>ResetPasswordValidations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPasswordValidations.aspx.designer.cs">
+      <DependentUpon>ResetPasswordValidations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SeeReplies.aspx.cs">
+      <DependentUpon>SeeReplies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SeeReplies.aspx.designer.cs">
+      <DependentUpon>SeeReplies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendMail.aspx.cs">
+      <DependentUpon>SendMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendMail.aspx.designer.cs">
+      <DependentUpon>SendMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SessionCheck.aspx.cs">
+      <DependentUpon>SessionCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SessionCheck.aspx.designer.cs">
+      <DependentUpon>SessionCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="settings.aspx.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="settings.aspx.designer.cs">
+      <DependentUpon>settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdminPanel\html\scss\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60239</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44379/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
